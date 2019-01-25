@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class AddInput { 
 
     public static void main(String[] args) {
@@ -16,9 +17,9 @@ public class AddInput {
         // These two lines will get you the first two arguments 
         int a = Integer.parseInt(args[0]);
         int b = Integer.parseInt(args[1]);
-        int sum = 
+        int sum = a + b;
         
         // Print out "The sum of _ and _ is _" where you actually print the numbers they enter and the sum
-
+        System.out.println("The sum of " + a + " and " + b + " is " + sum + ".");
     }
 }
