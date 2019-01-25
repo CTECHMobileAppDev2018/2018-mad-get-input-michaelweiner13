@@ -35,7 +35,7 @@ public class AddInput {
         }
 
         // Check to make sure that isInt1 and isInt2 are both true (both arguments provided by the user are ints) and that only 2 arguments have been supplied
-        // If any one of these three (3) conditions are not true "You must enter exactly two integers! No letters or symbols. Numbers only (ex: 1 2)." is returned to the console
+        // If any one of these three (3) conditions are not true "Invalid Input. You have either entered in less or more than two arguments, or one or both of your arguments are not integers. Please try again." is returned to the console
         if (args.length != 2 || isInt1 == false || isInt2 == false) {
             System.out.println("Invalid Input. You have either entered in less or more than two arguments, or one or both of your arguments are not integers. Please try again.");
         } else {
