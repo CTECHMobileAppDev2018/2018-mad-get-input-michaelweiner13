@@ -6,35 +6,42 @@ public class AddInput {
         boolean isInt1 = false;
         boolean isInt2 = false;
 
-        // Check the data type of args[0]
-        try {
-            // Check that args[0] is an int using .parseInt()
-            Integer.parseInt(args[0]);
+        // Establishes an if-statement to determine if args[] has at least two stored values
+        // If args[] does hold at least two values the if-statement will execture to make sure that the values are intengers only
+        if (args.length >= 2) {
+          // Check the data type of args[0]
+          try {
+              // Check that args[0] is an int using .parseInt()
+              Integer.parseInt(args[0]);
 
-            // Set isInt1 to true if no NumberFormatException error is thrown
-            isInt1 = true;
-        }
-        catch (NumberFormatException e) { 
-            // Set isInt1 to false if the first stored element in args[] is not an int
-            isInt1 = false;
+              // Set isInt1 to true if no NumberFormatException error is thrown
+              isInt1 = true;
+          }
+          catch (NumberFormatException e) {
+              // Set isInt1 to false if the first stored element in args[] is not an int
+              isInt1 = false;
+          }
+
+          // Check the data type of args[1]
+          try {
+              // Check that args[1] is an int using .parseInt()
+              Integer.parseInt(args[1]);
+
+              // Set isInt2 to true if no NumberFormatException error is thrown
+              isInt2 = true;
+          }
+          catch (NumberFormatException e) {
+              //Set isInt2 to false if the second stored element in args[] is not an int
+              isInt2 = false;
+          }
         }
 
-        // Check the data type of args[1]
-        try {
-            // Check that args[1] is an int using .parseInt()
-            Integer.parseInt(args[1]);
-
-            // Set isInt2 to true if no NumberFormatException error is thrown
-            isInt2 = true;
-        }
-        catch (NumberFormatException e) {
-            //Set isInt2 to false if the second stored element in args[] is not an int
-            isInt2 = false;
-        }
-
-        // Check to make sure that isInt1 and isInt2 are both true (both arguments provided by the user are ints) and that only 2 arguments have been supplied
+        // The first if-statement checks to make sure that args[] is not empty
+        // Then check to make sure that isInt1 and isInt2 are both true (both arguments provided by the user are ints) and that only 2 arguments have been supplied
         // If any one of these three (3) conditions are not true "You must enter exactly two integers! No letters or symbols. Numbers only (ex: 1 2)." is returned to the console
-        if (args.length != 2 || isInt1 == false || isInt2 == false) {
+        if (args.length == 0) {
+          System.out.println("Invalid input. You did not enter anything. Please try again.");
+        } else if (args.length != 2 || isInt1 == false || isInt2 == false) {
             System.out.println("Invalid Input. You have either entered in less or more than two arguments, or one or both of your arguments are not integers. Please try again.");
         } else {
           // Parses the first and second arguments that haved been provided to the program into two different variables
