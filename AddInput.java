@@ -40,7 +40,7 @@ public class AddInput {
             isInt2 = false; 
         } 
         
-        // Check to make sure that isInt1 and isInt2 are both true (both are ints) and that only 2 arguments have been supplied
+        // Check to make sure that isInt1 and isInt2 are both true (both arguments provided by the user are ints) and that only 2 arguments have been supplied
         // If any one of these three (3) conditions are not true "You must enter exactly two integers! No letters or symbols. Numbers only (ex: 1 2)." is returned to the console
         if (args.length != 2 || isInt1 == false || isInt2 == false) {
             System.out.println("You must enter exactly two integers! No letters or symbols. Numbers only (ex: 1 2).");
