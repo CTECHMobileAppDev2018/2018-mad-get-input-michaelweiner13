@@ -7,8 +7,8 @@ public class AddInput {
         // The variable "args" is called an "array" because it's actually a list of items
         // If you good "How to get the number of items in an array in Java", you should be able to figure out how many integers there are in the variable "args"
         
-      boolean isInt1 = false;
-      boolean isInt2 = false;
+        boolean isInt1 = false;
+        boolean isInt2 = false;
       
         try { 
             // checking valid integer using parseInt() method 
