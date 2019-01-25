@@ -6,10 +6,30 @@ public class AddInput {
         // The variable "args" holds all of the arguments that were passed into this program
         // The variable "args" is called an "array" because it's actually a list of items
         // If you good "How to get the number of items in an array in Java", you should be able to figure out how many integers there are in the variable "args"
-        // int num_args = ???
+        
+      boolean isInt1 = false;
+      boolean isInt2 = false;
       
-        if (args.length != 2 ) {
-            System.out.println("You must enter exactly two integers!");
+        try { 
+            // checking valid integer using parseInt() method 
+            Integer.parseInt(args[0]); 
+            isInt1 = true; 
+        }  
+        catch (NumberFormatException e) { 
+            isInt1 = false; 
+        } 
+        
+        try { 
+            // checking valid integer using parseInt() method 
+            Integer.parseInt(args[1]); 
+            isInt2 = true; 
+        }  
+        catch (NumberFormatException e) { 
+            isInt2 = false; 
+        } 
+        
+        if (args.length != 2 || isInt1 == false || isInt2 == false) {
+            System.out.println("You must enter exactly two integers! No letters or symbols. Numbers only (ex: 1 2).");
         } else {
           // **** START HERE: ****
           // These two lines will get you the first two arguments 
